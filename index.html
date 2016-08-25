@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <title>Bending the Law: Search</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<style>
+
+	.link {
+	  stroke: #aaa;
+	}
+
+	.node text {
+	stroke:#333;
+	cursos:pointer;
+	}
+
+	.node circle{
+	stroke:#fff;
+	stroke-width:3px;
+	fill:#555;
+	}
+
+	</style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <div id="left" class="">
+  
+
+	<!--
+              <h1 id='warped'>
+                     <span class='w0'>B</span><span class='w1'>E</span><span class='w2'>N</span><span class='w3'>D</span><span class='w4'>I</span><span class='w5'>N</span><span class='w6'>G</span><span class='w7'>
+                     </span>
+              </h1>
+	-->
+
+                <h1>BENDING THE LAW <span style="color:red;">0.2</span></h1>
+
+                <p>
+                Bending the Law is an open-source legislative search 
+                tool that uses a specially designed citation and topic model
+                to provide better results. 
+                See <a href="https://wikimedia.org/en/llama">the paper</a>.
+                </p>
+
+
+                <div class="menu flexrow flexfill">
+                        <div>USC</div>
+                        <div>CFR</div>
+                        <div>USSC</div>
+                        <div>USTC</div>
+                </div>
+
+                <!--
+                <p>
+                    <b>Bending the Law</b> is an open-source database search 
+                    (ala Lexis-Nexis or WestLaw) that allows users to search
+                    and navigate legal corpora using a specially-designed
+                    citation and topic model (described in <a href="https://wikipedia.org/en/llama">this paper</a>).
+                    
+                </p>
+                -->
+
+                <div class="arrow_box">
+			<h2>United States Code (USC)</h2>
+
+			<!--
+			<p style="color:gray;">
+				<i>The USC is organized by Title, Chapter, Section, and Subsection.</i>
+			</p>
+
+			-->
+
+			<p>
+			Search the USC
+			</p>
+			<form id="search">
+				<p class="control has-addons">
+					<input id="main-search" class="input" type="text" placeholder="Search">
+					<a id="searchbutton" class="button is-info">
+						Search
+					</a>
+				</p>
+			</form>
+
+			<p>
+			or select a title and section 
+			</p>
+			<form id="select" style="width:100%;">
+				<table>
+				<tr><td>Title</td><td><span class="select"><select id="title-select"></select></span></td></tr>
+				<tr><td>Section</td><td><span class="select"><select id="section-select"></select></span></tr>
+				</table>
+			</form>
+			<pre id="description">
+			</pre>
+		</div>
+                <div id="search_results" style="margin-top:24px;">
+                </div>
+
+
+                <!--
+                <h2>What is it?</h2>
+                -->
+
+
+
+                <div class="flexrow" style="position:absolute; bottom:0px; padding:5px; font-size:.8em; color:gray;">
+                <img height="50px" width="auto" src="Dartmouth_College_shield.svg"/>
+                <i style="flex:1; padding-left:25px;">This project is supported by the Dartmouth College Department of Mathematics 
+                </br> and Neukom Institute of Computational Science.</i>
+                </div>
+
+        </div>
+
+        <div id="right" style="position:absolute; left:600px; width:calc(100% - 600px); height:calc(100% - 10px);">
+                <span style="text-align:center; width:100%; position:absolute; bottom:50px; font-size:2em;">To start, search or choose a title and section</span>
+<!--
+		<svg id="graph" width="960" height="600"></svg>
+-->
+<svg width="100%" height="100%"></svg>
+<script src="//d3js.org/d3.v4.min.js"></script>
+
+        </div>
+
+        <!--
+        <div id="foot">
+            <p>
+            Developers: Reed Harder (Dartmouth College), 
+            Greg Leibon (Dartmouth College), 
+            Michael Livermore (UVA), 
+            Allen Riddell (Dartmouth College), 
+            and Dan Rockmore (Dartmouth College)
+            </p>
+
+            <p>
+            We acknowledge the partial support of the Dartmouth College Department of Mathematics and Neukom Institute for Computational Science
+            </p>
+            <p>
+            Contacts: Dan Rockmore (<a href="rockmore@cs.dartmouth.edu"> rockmore@cs.dartmouth.edu</a>) 
+            and Michael Livermore (<a href="mal5un@virginia.edu" >mal5un@virginia.edu</a>)
+            </p>
+        </div>
+        -->
+    </body>
+  
+    <script src="client.js"></script>
+
+<script>load_prelim();</script>
+
+  
+</html>
